@@ -26,12 +26,16 @@ body {
   font-weight: bold;
 }
 
-#description {
+.center {
+  height: calc(100% - 80px);
+}
+
+.description {
   margin-top: 0;
   margin-left: 35px;
   display: flex;
   align-items: center;
-  height: 40%;
+  height: calc(100% - 360px);
   background-color: #696868;
   color: aliceblue;
 }
@@ -116,7 +120,7 @@ body {
 
 #footer {
   display: flex;
-  height: 13%;
+  height: 5rem;
   width: 100%;
   background-color: #43689b;
   position: absolute;
@@ -124,8 +128,8 @@ body {
 }
 
 #footer img {
-  height: 80px;
-  width: 80px;
+  height: 4rem;
+  width: 4rem;
   position: absolute;
   margin: 12px;
 }
