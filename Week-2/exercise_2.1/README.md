@@ -19,4 +19,6 @@ Create a new webpage on a subject that you're interested in. The page should **N
 3. Semantic tags should be used for laying out the UI.
 4. The Form validation is client-side validation. The validation messages could be subjective.
 5. There should be one or more Git commits with meaningful commit messages.
-
+---
+### The finale output 0f the exercise
+![](../exercise_2.1/exercise_2.1.png)
