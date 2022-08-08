@@ -11,3 +11,6 @@
  2. The UI should closely match with the screengrab given as sample. Layout, forms, validationetc.
  3. 3rd party CSS libraries should not have been used.
  4. There should be one or more Git commits with meaningful commit messages.
+
+### final output 
+![](exercise_2.2.png)

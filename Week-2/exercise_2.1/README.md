@@ -21,4 +21,4 @@ Create a new webpage on a subject that you're interested in. The page should **N
 5. There should be one or more Git commits with meaningful commit messages.
 ---
 ### The finale output 0f the exercise
-![](../exercise_2.1/exercise_2.1.png)
+![](exercise_2.1.png)
