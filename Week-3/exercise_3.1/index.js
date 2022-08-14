@@ -22,10 +22,10 @@ const add = (a, b) => {
 
 const memorizeAdd = memorize(add)
 time("process_1");
-memorizeAdd(100,100);
+memorizeAdd(100,200);
 timeEnd("process_1");
 time("process_2");
-memorizeAdd(100,200);
+memorizeAdd(100,100);
 timeEnd("process_2");
 time("process_3");
 memorizeAdd(100,100);
@@ -33,3 +33,14 @@ timeEnd("process_3");
 time("process_4");
 memorizeAdd(100,200);
 timeEnd("process_4");
+
+/* 
+Function called for Operation 300
+Printing Cache Map(1) { '100,200' => 300 }
+process_1: 5.239ms
+Function called for Operation 200
+Printing Cache Map(2) { '100,200' => 300, '100,100' => 200 }
+process_2: 0.304ms
+process_3: 0.015ms
+process_4: 0.008ms
+*/
