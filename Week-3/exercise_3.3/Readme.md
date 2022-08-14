@@ -1,6 +1,6 @@
 
 ## Exercise 3.3:
-1. What is the output of the below problem and why:[30min]
+1. What is the output of the below problem and why: [30min]
 
 ```
 function createIncrement() {
