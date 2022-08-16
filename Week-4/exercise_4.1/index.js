@@ -1,30 +1,89 @@
 const { log, error } = require('console')
 
-const getNumber = new Promise((resolve, reject) => {
-  const randomNumber = parseInt(Math.random() * 100, 10)
-  log('Random Number ->> ', randomNumber)
-  setTimeout(() => {
-    if (randomNumber % 5 === 0) {
-      reject(`Rejected with num: ${randomNumber}`);
+
+const getNumber = function () {
+  return parseInt(Math.random() * 100, 10)
+}
+
+function CustomPromise(_executor) {
+  let onResolve, onReject, onFinally;
+  let currentState = '';
+  let finallyCalled = false;
+
+  this.then = function (callBack) {
+    onResolve = callBack;
+    return this
+  }
+  this.catch = function (callBack) {
+    onReject = callBack;
+    return this
+  }
+  this.finally = function (callBack) {
+    onFinally = callBack;
+    finallyCalled = true
+    currentState = 'stopped'
+  }
+
+  function resolve(_value) {
+    if (this.currentState === 'pending') {
+      return
     }
-    resolve(`Resolved with num: ${randomNumber}`);
-  }, 300);
+    if (typeof onResolve == 'function') {
+      this.currentState = 'fulfilled'
+      onResolve(_value)
+    }
+    if (finallyCalled === true) {
+      onFinally()
+    }
+  }
+
+  function reject(_value) {
+    if (this.currentState === 'pending') {
+      return
+    }
+    if (typeof onReject == 'function') {
+      this.currentState = 'rejected'
+      onReject(_value)
+    }
+    if (finallyCalled === true) {
+      onFinally()
+    }
+  }
+
+  _executor(resolve, reject)
+}
+
+const myPromise = new CustomPromise((resolve, reject) => {
+  const newGetNumber = getNumber()
+  log('new Get Number ->> ', newGetNumber)
+  setTimeout(() => {
+    if (newGetNumber % 5 !== 0) {
+      resolve(newGetNumber)
+    } else {
+      reject(newGetNumber)
+    }
+  }, 100);
 })
 
-const newGenNum = getNumber
 
-newGenNum.then((result) => {
-  log(result)
-}).catch((err) => {
-  error(err)
-});
+myPromise
+  .then((result) => {
+    log(`Resolved With Num: ${result}`)
+  })
+  .catch((err) => {
+    log(`Rejected with num :${err}`)
+  })
+  .finally(() => log(`Finally Called`));
+
 
 /* 
-Random Number ->>  35
-Rejected with num: 35
+new Get Number ->>  90
+Rejected with num :90
+Finally Called
 */
 
 /* 
-Random Number ->>  31
-Resolved with num: 31
+new Get Number ->>  17
+Resolved With Num: 17
+Finally Called
 */
