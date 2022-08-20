@@ -8,7 +8,7 @@
 3. Bonus - if space and time complexity is taken care.
 4. Reference:
 
-```
+```javascript 
 function isVowel(char){
   return "aeiou".includes(char);
 }

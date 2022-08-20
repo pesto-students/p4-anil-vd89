@@ -1,6 +1,7 @@
 ## Exercise5.4:
 - Create a simple Javascript function code for addition, subtraction, and multiplication of 2numbers and write the corresponding Jest based tests for it.
-```
+
+```javascript
 const mathOperations = {
   sum: function(a,b) {
     return a + b;

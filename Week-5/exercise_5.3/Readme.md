@@ -3,7 +3,8 @@
 
 ### Guidelines:
 1. Reference
-```
+
+```javascript
 hasDuplicate([1,5,-1,4]) // false
 const hasDuplicate=arr=>newSet(arr).size!==arr.length
 
