@@ -1,5 +1,5 @@
 function Stack(_array) {
-  this.array = [];
+  this.array = new Array().fill(0);
   if (_array) {
     this.array = _array
   }
