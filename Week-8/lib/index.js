@@ -41,4 +41,22 @@ BinarySearchTree.prototype.viewTree = function () {
   }
 }
 
+BinarySearchTree.prototype.isBinaryTree = function () {
+  if (this._root === null) return false
+  const queue = [this._root]
+  let node
+  while (queue.length) {
+    node = queue.shift() ?? null
+    if (node) {
+      if (node.left)
+        if (node.left.value < node.value) queue.push(node.left);
+        else return false;
+      if (node.right)
+        if (node.right.value > node.value) queue.push(node.right);
+        else return false;
+    }
+  }
+  return true
+}
+
 module.exports = BinarySearchTree
