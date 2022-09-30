@@ -59,4 +59,25 @@ BinarySearchTree.prototype.isBinaryTree = function () {
   return true
 }
 
+BinarySearchTree.prototype.levelOrder = function () {
+  if (this._root === null) return []
+  const result = [];
+  const queue = [this._root]
+  while (queue.length) {
+    const level = [];
+    const len = queue.length;
+    for (let i = 0; i < len; i++) {
+      const node = queue.shift();
+      if (node) {
+        level.push(node.value);
+        if (node.left) queue.push(node.left);
+        if (node.right) queue.push(node.right);
+      }
+    }
+    result.push(level);
+  }
+  return result;
+}
+
+
 module.exports = BinarySearchTree
