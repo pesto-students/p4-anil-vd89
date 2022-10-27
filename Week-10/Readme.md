@@ -20,6 +20,10 @@ GET/POST:
 https://api.shrtco.de/v2/info?code=example
 ```
 
+### Video 
+![Screenshot from 2022-10-04 10-52-38](https://user-images.githubusercontent.com/34570078/198321674-633791f9-4eef-406e-838f-43bab8ea1a1e.png)
+
+
 ### Benchmarks:
 1. There should be a separate branch created in GitHub for this exercise.
 2. The Project should include a ReadMe File which will lists down all the commands clearly for running application on local
