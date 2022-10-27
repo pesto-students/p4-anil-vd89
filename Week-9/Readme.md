@@ -13,3 +13,7 @@
 2. The Project should include a ReadMe File which will lists down all the commands clearly for running application on local
 3. Application should adhere to component architecture and should have meaningful component hierarchy
 4. Application should handle all the validations. For example blank todo5.There should be one or more Git commits with meaningful commit messages.
+
+
+### Video link of the task
+#### [Video](https://www.loom.com/share/87a30947f12d4fbb9dd16bb2ab00ff9e)
