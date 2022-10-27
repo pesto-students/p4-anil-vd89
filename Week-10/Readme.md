@@ -21,7 +21,11 @@ https://api.shrtco.de/v2/info?code=example
 ```
 
 ### Video 
-![Screenshot from 2022-10-04 10-52-38](https://user-images.githubusercontent.com/34570078/198321674-633791f9-4eef-406e-838f-43bab8ea1a1e.png)
+
+
+
+https://user-images.githubusercontent.com/34570078/198322718-feda5e1f-64f0-4d33-8462-71a1f563c94f.mp4
+
 
 
 ### Benchmarks:
