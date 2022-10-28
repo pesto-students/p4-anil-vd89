@@ -36,7 +36,7 @@ If you do leave it all in index.js, you won’t need to export the connected Roo
 5. The Action - Dispatch - Reducer - Store flow should work as expected.
 
 
-### ReduxExercise2:
+### ReduxExercise 2:
 
 Create a brand new React project with [Create ReactApp](https://shrtco.de/4W5Ps6) or [CodeSandboxDelete](https://shrtco.de/ZumZyi) the boilerplate code from index.js and start fresh.
 
