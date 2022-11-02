@@ -1,0 +1,23 @@
+#root {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+button {
+  width: 20%;
+  font-size: 25px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+}
+
+.display-text {
+  font-size: 20px;
+}
+
+.add {
+  color: white;
+  background: #8e488e;
+}
